@@ -1,3 +1,5 @@
 from django.shortcuts import render
+# from django.http import HttpResponse
 
-# Create your views here.
+def detail_servico(request):
+    return render(request, 'servicos/detail_servico.html')
