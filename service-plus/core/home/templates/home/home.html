@@ -10,8 +10,8 @@
           <div class="col">
             <div class="card-categoria">
               <div class="img">
-              {% if image.categoria %}
-                <img src="{{ image.categoria.url }}" class="image-fluid card-top">
+              {% if categoria.image %}
+                <img src="{{ categoria.image.url }}" class="image-fluid card-top" height="200" width="200">
               {% endif %}
             </div>
                 <p class="nome-categoria"> {{ categoria.name }} </p>  
@@ -27,8 +27,8 @@
       <div class="col-6 col-sm-3  pt-3 border">
         <div class="card-servico">
           <div class="img">
-          {% if image.servico %}
-          <img src=" {{ image.servico.url }} " class="image-fluid card-top" >
+          {% if servico.image %}
+            <img src=" {{ servico.image.url }} " class="image-fluid card-top" height="200" width="200">
           {% endif %}
         </div>
           <p> {{ servico.title }} </p>
