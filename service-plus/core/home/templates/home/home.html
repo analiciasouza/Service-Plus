@@ -1,42 +1,46 @@
 {% extends 'base.html' %}
-
-
-
 {% block content %}
-<div class="categorias">
-    <div class="container text-center pt-5">
-        <div class="row">
-          {% for categoria in categorias %}
-          <div class="col">
-            <div class="card-categoria">
-              <div class="img">
-              {% if image.categoria %}
-                <img src="{{ image.categoria.url }}" class="image-fluid card-top">
-              {% endif %}
+    <div class="categorias">
+        <div class="container text-center pt-5">
+            <div class="row">
+                {% for categoria in categorias %}
+                    <div class="col">
+                        <div class="card-categoria">
+                            <div class="img">
+                                {% if categoria.image %}
+                                    <img src="{{ categoria.image.url }}"
+                                         class="image-fluid card-top"
+                                         height="200"
+                                         width="200">
+                                {% endif %}
+                            </div>
+                            <p class="nome-categoria">{{ categoria.name }}</p>
+                        </div>
+                    </div>
+                {% endfor %}
             </div>
-                <p class="nome-categoria"> {{ categoria.name }} </p>  
+        </div>
+        <div class="servicos pt-5">
+            <div class="container text-center">
+                <div class="row">
+                    {% for servico in servico %}
+                        <div class="col-6 col-sm-3  pt-3 border">
+                            <div class="card-servico">
+                                <div class="img">
+                                    {% if servico.image %}
+                                        <img src=" {{ servico.image.url }} "
+                                             class="image-fluid card-top"
+                                             height="200"
+                                             width="200">
+                                    {% endif %}
+                                </div>
+                                <p>{{ servico.title }}</p>
+                                <p>{{ servico.professional }}</p>
+                                <a href="{{ servico.get_absolute_url }}" target="_blank">Contrate já!</a>
+                            </div>
+                          </div>
+                    {% endfor %}
+                </div>
             </div>
-          </div> 
-          {% endfor %}
-      </div>
-</div>
-<div class="servicos pt-5">
-  <div class="container text-center">
-    <div class="row">
-      {% for servico in servico %}
-      <div class="col-6 col-sm-3  pt-3 border">
-        <div class="card-servico">
-          <div class="img">
-          {% if image.servico %}
-          <img src=" {{ image.servico.url }} " class="image-fluid card-top" >
-          {% endif %}
         </div>
-          <p> {{ servico.title }} </p>
-          <p> {{ servico.professional }} </p>
-        </div>
-      </div>
-      {% endfor %}
-    </div>
-  </div>
-</div>
-{% endblock %}
+    {% endblock %}
