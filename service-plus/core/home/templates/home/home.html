@@ -11,7 +11,7 @@
             <div class="card-categoria">
               <div class="img">
               {% if categoria.image %}
-                <img src="{{ categoria.image.url }}" class="image-fluid card-top" style="height:200px;width:200px;">
+                <img src="{{ categoria.image.url }}" class="image-fluid card-top" height="200" width="200">
               {% endif %}
             </div>
                 <p class="nome-categoria"> {{ categoria.name }} </p>  
@@ -28,7 +28,7 @@
         <div class="card-servico">
           <div class="img">
           {% if servico.image %}
-            <img src=" {{ servico.image.url }} " class="image-fluid card-top" style="height:200px;width=200px;">
+            <img src=" {{ servico.image.url }} " class="image-fluid card-top" height="200" width="200">
           {% endif %}
         </div>
           <p> {{ servico.title }} </p>
