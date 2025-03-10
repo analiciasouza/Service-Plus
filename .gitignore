@@ -34,6 +34,8 @@ __pycache__/
 
 # Distribution / packaging
 .Python
+service-plus/core/home/migrations/
+service-plus/core/media/
 env/
 build/
 develop-eggs/
