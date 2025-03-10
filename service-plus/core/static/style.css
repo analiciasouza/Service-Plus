@@ -1,0 +1,10 @@
+nav {
+    display: flexbox;
+    flex-direction: row;
+
+}
+
+.navbar-nav {
+    display: flex;
+    justify-content: center;
+}
