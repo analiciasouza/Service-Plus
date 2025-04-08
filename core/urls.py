@@ -5,5 +5,7 @@ from home import views
 urlpatterns = [
     path('', views.home_view),
     path('admin/', admin.site.urls),
+    path('api/', include('api.urls')),
+    path('api-auth/', include('rest_framework.urls')),
     path('servico/', include(('servicos.urls', 'servicos'), namespace="servicos")),
 ] 
