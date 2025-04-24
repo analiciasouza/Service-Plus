@@ -75,6 +75,8 @@ TEMPLATES = [
 
 WSGI_APPLICATION = 'core.wsgi.application'
 
+AUTH_USER_MODEL = 'login.User'
+
 
 # Database
 # https://docs.djangoproject.com/en/5.2/ref/settings/#databases
@@ -83,9 +85,10 @@ DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql_psycopg2',
         'NAME': 'serviceplus',
-        'USER': 'postgres',
+        'USER': 'userpostgres',
         'PASSWORD':'postgres',
         'HOST': 'localhost',
+        'PORT' : 5432
     }
 }
 
