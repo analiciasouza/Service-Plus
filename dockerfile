@@ -1,5 +1,5 @@
 # Informa a imagem base
-FROM python:3
+FROM python:alpine
 # Define o ambiente
 ENV PYTHONUNBUFFERED=1
 # Esta será o diretorio onde nosso projeto irá rodar

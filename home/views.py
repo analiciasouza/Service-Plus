@@ -4,7 +4,7 @@ from .models.categorias import Categoria
 
 
 # Create your views here.
-def home(request):
+def home_view(request):
     categorias = Categoria.objects.all()
     servico = Servico.objects.all()
     context = {

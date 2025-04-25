@@ -6,4 +6,4 @@ def detail_servico(request, servico_id):
     context = {
         'servico': servico
     }
-    return render(request, 'servicos/servicos.html', context)
+    return render(request, 'servicos/servico.html', context)
