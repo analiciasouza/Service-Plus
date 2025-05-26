@@ -6,11 +6,13 @@ from home import views
 
 
 urlpatterns = [
-    path('home/', views.home_view , name='home'),
+    path('home/', include('home.urls')),
     path('', include('login.urls')),
     path('admin/', admin.site.urls),
-    path('api/v1/', include('api.urls')),
     path('api-auth/', include('rest_framework.urls')),
     path('servico/', include('servicos.urls', namespace='servicos')),
+
+    # API URLS
+    path('api/v1/home/', include('home.api.urls'))
 ] 
 urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
