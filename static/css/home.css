@@ -1,0 +1,275 @@
+/* ===== HOMEPAGE STYLES - SERVICE+ ===== */
+
+/* Variáveis CSS */
+:root {
+    --primary-color: #dc3545; /* Mesma cor do seu navbar */
+    --primary-dark: #c82333;
+    --secondary-color: #f8f9fa;
+    --text-dark: #212529;
+    --text-light: #6c757d;
+    --shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+    --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+    --border-radius: 15px;
+}
+
+/* ===== HERO SECTION ===== */
+.hero-section {
+    background: linear-gradient(135deg, var(--secondary-color) 0%, #e9ecef 100%);
+    padding: 4rem 0;
+    margin-bottom: 2rem;
+}
+
+.hero-title {
+    font-size: 3rem;
+    font-weight: bold;
+    color: var(--text-dark);
+    margin-bottom: 1rem;
+}
+
+.hero-subtitle {
+    font-size: 1.2rem;
+    color: var(--text-light);
+    margin-bottom: 2rem;
+}
+
+.btn-hire {
+    background: linear-gradient(135deg, var(--primary-color), var(--primary-dark)) !important;
+    border: none !important;
+    color: white !important;
+    padding: 0.75rem 2rem;
+    border-radius: 25px;
+    font-weight: 600;
+    transition: all 0.3s ease;
+}
+
+.btn-hire:hover {
+    transform: translateY(-2px);
+    box-shadow: var(--shadow);
+    color: white !important;
+}
+
+/* ===== SEÇÃO CATEGORIAS ===== */
+.categorias {
+    background: white;
+    padding: 4rem 0;
+    margin-bottom: 2rem;
+}
+
+.card-categoria {
+    background: white;
+    border-radius: var(--border-radius);
+    padding: 2rem 1rem;
+    text-align: center;
+    transition: all 0.3s ease;
+    cursor: pointer;
+    height: 100%;
+    box-shadow: var(--shadow);
+    border: none;
+    margin-bottom: 1rem;
+}
+
+.card-categoria:hover {
+    transform: translateY(-10px);
+    box-shadow: var(--shadow-lg);
+}
+
+.card-categoria .img {
+    width: 80px;
+    height: 80px;
+    background: linear-gradient(135deg, var(--primary-color), var(--primary-dark));
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 1rem;
+    transition: all 0.3s ease;
+    overflow: hidden;
+}
+
+.card-categoria:hover .img {
+    transform: scale(1.1);
+}
+
+.card-categoria .img img {
+    width: 50px !important;
+    height: 50px !important;
+    object-fit: cover;
+    border-radius: 50%;
+    filter: brightness(0) invert(1);
+}
+
+.nome-categoria {
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: var(--text-dark);
+    margin: 0;
+    transition: color 0.3s ease;
+}
+
+.card-categoria:hover .nome-categoria {
+    color: var(--primary-color);
+}
+
+/* ===== SEÇÃO SERVIÇOS ===== */
+.servicos {
+    background: var(--secondary-color);
+    padding: 4rem 0;
+}
+
+.servicos .container::before {
+    content: "Profissionais em Destaque";
+    display: block;
+    text-align: center;
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: var(--text-dark);
+    margin-bottom: 3rem;
+}
+
+.servicos .col-6.col-sm-3 {
+    padding: 0.75rem;
+}
+
+.card-servico {
+    background: white;
+    border-radius: var(--border-radius);
+    overflow: hidden;
+    box-shadow: var(--shadow);
+    transition: all 0.3s ease;
+    height: 100%;
+    border: none;
+    padding: 0;
+}
+
+.card-servico:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--shadow-lg);
+}
+
+.card-servico .img {
+    position: relative;
+    height: 250px;
+    overflow: hidden;
+    border-radius: var(--border-radius) var(--border-radius) 0 0;
+}
+
+.card-servico .img img {
+    width: 100% !important;
+    height: 100% !important;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.card-servico:hover .img img {
+    transform: scale(1.05);
+}
+
+.card-servico .img::after {
+    content: "Destaque";
+    position: absolute;
+    top: 1rem;
+    left: 1rem;
+    background: var(--primary-color);
+    color: white;
+    padding: 0.4rem 0.8rem;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    font-weight: 600;
+    z-index: 2;
+}
+
+.card-servico p {
+    padding: 0 1.5rem;
+    margin: 1rem 0 0.5rem 0;
+}
+
+.card-servico p:first-of-type {
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: var(--text-dark);
+    margin-top: 1.5rem;
+}
+
+.card-servico p:nth-of-type(2) {
+    color: var(--text-light);
+    font-size: 0.95rem;
+    margin-bottom: 1.5rem;
+}
+
+.card-servico .btn {
+    background: linear-gradient(135deg, var(--primary-color), var(--primary-dark)) !important;
+    border: none !important;
+    color: white !important;
+    padding: 0.75rem 1.5rem;
+    border-radius: 25px;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    margin: 0 1.5rem 1.5rem 1.5rem;
+    text-decoration: none;
+    display: inline-block;
+    text-align: center;
+    width: calc(100% - 3rem);
+}
+
+.card-servico .btn:hover {
+    transform: translateY(-2px);
+    box-shadow: var(--shadow);
+    color: white !important;
+    text-decoration: none;
+}
+
+/* ===== RESPONSIVIDADE ===== */
+@media (max-width: 768px) {
+    .hero-title {
+        font-size: 2rem;
+    }
+    
+    .hero-subtitle {
+        font-size: 1rem;
+    }
+    
+    .categorias {
+        padding: 2rem 0;
+    }
+    
+    .servicos {
+        padding: 2rem 0;
+    }
+    
+    .servicos .container::before {
+        font-size: 2rem;
+        margin-bottom: 2rem;
+    }
+    
+    .card-categoria {
+        padding: 1.5rem 0.5rem;
+        margin-bottom: 1rem;
+    }
+    
+    .card-categoria .img {
+        width: 60px;
+        height: 60px;
+    }
+    
+    .card-categoria .img img {
+        width: 35px !important;
+        height: 35px !important;
+    }
+    
+    .nome-categoria {
+        font-size: 1rem;
+    }
+    
+    .card-servico .img {
+        height: 200px;
+    }
+    
+    .card-servico p:first-of-type {
+        font-size: 1.1rem;
+    }
+    
+    .card-servico .btn {
+        padding: 0.6rem 1rem;
+        font-size: 0.9rem;
+    }
+}
