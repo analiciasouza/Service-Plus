@@ -10,7 +10,7 @@ urlpatterns = [
     path('', include('login.urls')),
     path('admin/', admin.site.urls),
     path('api-auth/', include('rest_framework.urls')),
-    path('servico/', include('servicos.urls', namespace='servicos')),
+    path('servicos/', include('servicos.urls', namespace='servicos')),
 
     # API URLS
     path('api/v1/home/', include('home.api.urls'))

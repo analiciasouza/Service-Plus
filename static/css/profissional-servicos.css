@@ -1,0 +1,234 @@
+/* Estilos específicos para a página de profissional */
+
+/* Background geral da página */
+.servicos {
+    background: linear-gradient(135deg, #cdd2e4 100%, #cf5454 50%);
+    min-height: 100vh;
+    padding-bottom: 3rem;
+}
+
+/* Título principal */
+.servicos h1:first-child {
+    font-size: 3rem;
+    font-weight: 300;
+    color: #c53030;
+    margin-bottom: 3rem;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+}
+
+/* Container principal do profissional */
+.servicos .container:first-of-type {
+    background: white;
+    border-radius: 20px;
+    padding: 3rem 2rem;
+    margin-bottom: 3rem;
+    box-shadow: 0 20px 60px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease;
+}
+
+.servicos .container:first-of-type:hover {
+    transform: translateY(-5px);
+}
+
+/* Imagem do profissional */
+.servicos .img-fluid.card-top {
+    width: 120px !important;
+    height: 120px !important;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 5px solid #dc3545;
+    box-shadow: 0 10px 30px rgba(220, 53, 69, 0.3);
+    margin-bottom: 1.5rem;
+    transition: transform 0.3s ease;
+}
+
+.servicos .img-fluid.card-top:hover {
+    transform: scale(1.05);
+}
+
+/* Nome do profissional */
+.servicos .container:first-of-type h2 {
+    font-size: 2rem;
+    font-weight: 600;
+    color: #333;
+    margin-bottom: 0.5rem;
+    margin-top: 0;
+}
+
+/* Profissão */
+.servicos .container:first-of-type .col-4 {
+    font-size: 1.1rem;
+    color: #666;
+    background: linear-gradient(45deg, #dc3545, #28a745);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-weight: 500;
+}
+
+/* Container do serviço */
+.servicos .container:last-of-type {
+    background: white;
+    border-radius: 20px;
+    padding: 3rem 2rem;
+    box-shadow: 0 20px 60px rgba(0,0,0,0.1);
+    animation: slideUp 0.8s ease-out;
+}
+
+/* Título do serviço */
+.servicos .container:last-of-type h1 {
+    font-size: 2rem;
+    font-weight: 600;
+    color: #333;
+    margin-bottom: 2rem;
+    position: relative;
+}
+
+.servicos .container:last-of-type h1::after {
+    content: '';
+    position: absolute;
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 60px;
+    height: 4px;
+    background: linear-gradient(45deg, #dc3545, #28a745);
+    border-radius: 2px;
+}
+
+/* Seção da imagem do serviço */
+.servicos .img {
+    margin: 2rem 0;
+}
+
+.servicos .image-fluid.card-top {
+    width: 100%;
+    max-width: 400px;
+    height: 250px;
+    object-fit: cover;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease;
+}
+
+.servicos .image-fluid.card-top:hover {
+    transform: scale(1.02);
+}
+
+/* Título da descrição */
+.servicos .container:last-of-type h2 {
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: #333;
+    margin: 2rem 0 1rem 0;
+}
+
+/* Texto da descrição */
+.servicos .container:last-of-type p {
+    font-size: 1.1rem;
+    color: #666;
+    line-height: 1.8;
+    background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+    padding: 2rem;
+    border-radius: 15px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+    margin: 0;
+}
+
+/* Animações */
+@keyframes slideUp {
+    from { 
+        opacity: 0; 
+        transform: translateY(50px); 
+    }
+    to { 
+        opacity: 1; 
+        transform: translateY(0); 
+    }
+}
+
+.servicos .container {
+    animation: slideUp 0.8s ease-out;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .servicos h1:first-child {
+        font-size: 2rem;
+    }
+    
+    .servicos .container:first-of-type,
+    .servicos .container:last-of-type {
+        padding: 2rem 1rem;
+        margin: 1rem;
+    }
+    
+    .servicos .img-fluid.card-top {
+        width: 100px !important;
+        height: 100px !important;
+    }
+    
+    .servicos .container:first-of-type h2 {
+        font-size: 1.5rem;
+    }
+    
+    .servicos .container:last-of-type h1 {
+        font-size: 1.5rem;
+    }
+    
+    .servicos .image-fluid.card-top {
+        height: 200px;
+    }
+}
+
+@media (max-width: 576px) {
+    .servicos .container:first-of-type,
+    .servicos .container:last-of-type {
+        margin: 0.5rem;
+    }
+    
+    .servicos .container:last-of-type p {
+        padding: 1.5rem;
+    }
+}
+
+/* Efeitos de hover para interatividade */
+.servicos .container:first-of-type .col-sm-12 {
+    transition: all 0.3s ease;
+}
+
+/* Melhorias para o texto "Sem imagem" */
+.servicos span {
+    color: #666;
+    font-style: italic;
+    padding: 2rem;
+    background: #f8f9fa;
+    border-radius: 10px;
+    border: 2px dashed #dee2e6;
+}
+
+/* Ajustes específicos para o Bootstrap */
+.servicos .row {
+    margin: 0;
+}
+
+.servicos .col-6 {
+    padding: 0;
+}
+
+/* Gradiente suave para transições */
+.servicos::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 200px;
+    background: linear-gradient(180deg, rgba(102, 126, 234, 0.1) 0%, transparent 100%);
+    pointer-events: none;
+}
+
+/* Posicionamento relativo para o before */
+.servicos {
+    position: relative;
+}
