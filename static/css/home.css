@@ -14,7 +14,7 @@
 
 /* ===== HERO SECTION ===== */
 .hero-section {
-    background: linear-gradient(135deg, var(--secondary-color) 0%, #e9ecef 100%);
+    background: linear-gradient(135deg, #f8f9fa 65%, #e9ecef 35%);
     padding: 4rem 0;
     margin-bottom: 2rem;
 }
@@ -50,7 +50,7 @@
 
 /* ===== SEÇÃO CATEGORIAS ===== */
 .categorias {
-    background: white;
+    background: #ffff;
     padding: 4rem 0;
     margin-bottom: 2rem;
 }
@@ -112,7 +112,7 @@
 
 /* ===== SEÇÃO SERVIÇOS ===== */
 .servicos {
-    background: var(--secondary-color);
+    background: linear-gradient(135deg, #f8f9fa 50%, #e9ecef 50%);;
     padding: 4rem 0;
 }
 
