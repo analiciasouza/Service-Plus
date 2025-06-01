@@ -28,7 +28,7 @@ SECRET_KEY = config('SECRET_KEY')
 DEBUG = True
 
 ALLOWED_HOSTS = []
-
+AUTH_USER_MODEL = 'usuarios.User'
 
 # Application definition
 
@@ -42,8 +42,7 @@ INSTALLED_APPS = [
     'rest_framework',
     'home', 
     'servicos',
-    'login' ,
-    'perfil',
+    'usuarios' 
 ]
 
 MIDDLEWARE = [
@@ -74,8 +73,6 @@ TEMPLATES = [
 ]
 
 WSGI_APPLICATION = 'core.wsgi.application'
-
-AUTH_USER_MODEL = 'login.User'
 
 LOGIN_REDIRECT_URL = 'home'
 
