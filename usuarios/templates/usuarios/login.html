@@ -1,6 +1,11 @@
 {% extends "base.html" %}
+{% load static %}
 
 {% block title %} Login {% endblock %}
+
+{% block extra_css %}
+    <link rel="stylesheet" href="{% static 'css/login.css' %}">
+{% endblock %}
 
 <body>
 
@@ -27,7 +32,13 @@
                         </div>
                         <button class="btn btn-login" type="submit">Entrar</button>
                     </form>
+                    <div class="cadastro-link">
+                    <a href="/cadastro/">
+                        Não tem cadastro? Clique aqui!
+                    </a>
                 </div>
+                </div>
+                
             </div>
         </div>
     </div>

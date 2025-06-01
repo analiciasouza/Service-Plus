@@ -1,0 +1,62 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block title %} Cadastro {% endblock %}
+
+{% block extra_css %}
+    <link rel="stylesheet" href="{% static 'css/cadastro.css' %}">
+{% endblock %}
+
+
+<body>
+
+    {% block nav-item %}
+    <li class="nav-item">
+        <a class="nav-link text-white" href=""> Login </a>
+    </li>
+{% endblock %}
+
+{% block content %}
+<div class="cadastro-container">
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-md-6 col-lg-4">
+                <div class="cadastro-card">
+                    <h2 class="cadastro-title"> Cadastro </h2>
+                    <form action="" method="post">
+                        {% csrf_token %}
+                        <div class="mb-3">
+                            <input type="email" class="form-control" placeholder="Email" name="email">
+                        </div>
+                        <div class="mb-3">
+                            <input type="text" class="form-control" placeholder="Nome" name="name">
+                        </div>
+                        <div class="mb-3">
+                            <input type="date" class="form-control" placeholder="Data de Nascimento" name="day_of_birth">
+                        </div>
+                        <div class="mb-3">
+                            <input type="text" class="form-control" placeholder="CPF" name="cpf">
+                        </div>
+                         <div class="mb-3">
+                             <label for="type-user">Escolha  tipo de cadastro:</label>
+                                <select id="type_user" name="type_user">
+                                    <option value="cliente"> Cliente </option>
+                                    <option value="profissional"> Prestador de Serviço </option>
+                                </select>          
+                        </div>
+                        <div class="mb-3">
+                            <input type="password" class="form-control" placeholder="password" name="password">
+                        </div>
+                        
+                        <button class="btn btn-login" type="submit">Cadastrar</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
+
+</body>
+
+</html>

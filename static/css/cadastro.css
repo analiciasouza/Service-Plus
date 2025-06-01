@@ -1,0 +1,203 @@
+/* Estilização da página de cadastro */
+.cadastro-container {
+    min-height: 100vh;
+    background: linear-gradient(135deg, #f5f7fa 100%, #c3cfe2 0%);
+    padding: 80px 0;
+    display: flex;
+    align-items: center;
+}
+
+.cadastro-card {
+    background: white;
+    border-radius: 15px;
+    padding: 40px 35px;
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
+    border: none;
+    position: relative;
+    overflow: hidden;
+}
+
+.cadastro-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 4px;
+    background: linear-gradient(90deg, #e74c3c, #c0392b);
+}
+
+.cadastro-title {
+    text-align: center;
+    color: #2c3e50;
+    margin-bottom: 35px;
+    font-weight: 600;
+    font-size: 28px;
+    position: relative;
+}
+
+.cadastro-title::after {
+    content: '';
+    position: absolute;
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 50px;
+    height: 3px;
+    background: linear-gradient(90deg, #e74c3c, #c0392b);
+    border-radius: 2px;
+}
+
+/* Estilização dos inputs */
+.form-control {
+    border: 2px solid #e9ecef;
+    border-radius: 8px;
+    padding: 12px 15px;
+    font-size: 16px;
+    transition: all 0.3s ease;
+    background-color: #f8f9fa;
+}
+
+.form-control:focus {
+    border-color: #e74c3c;
+    box-shadow: 0 0 0 0.2rem rgba(231, 76, 60, 0.15);
+    background-color: white;
+    outline: none;
+}
+
+.form-control::placeholder {
+    color: #6c757d;
+    font-weight: 400;
+}
+
+/* Estilização específica para os radio buttons */
+/* CSS simples para o campo select */
+label[for="type-user"] {
+        color: #495057;
+        font-weight: 500;
+        margin-bottom: 8px;
+        display: block;
+    }
+
+#type_user {
+        width: 100%;
+        padding: 12px 15px;
+        border: 2px solid #e9ecef;
+        border-radius: 8px;
+        background-color: #f8f9fa;
+        font-size: 16px;
+        color: #495057;
+        cursor: pointer;
+        transition: all 0.3s ease;
+    }
+
+#type_user:focus {
+        border-color: #e74c3c;
+        background-color: white;
+        outline: none;
+        box-shadow: 0 0 0 0.2rem rgba(231, 76, 60, 0.15);
+    }
+
+#type_user:hover {
+        border-color: #dee2e6;
+        background-color: white;
+    }
+
+/* Botão de cadastro */
+.btn-login {
+    width: 100%;
+    background: linear-gradient(135deg, #e74c3c 0%, #c0392b 100%);
+    border: none;
+    color: white;
+    padding: 12px 0;
+    font-size: 16px;
+    font-weight: 600;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    margin-top: 20px;
+}
+
+.btn-login:hover {
+    background: linear-gradient(135deg, #c0392b 0%, #a93226 100%);
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px rgba(231, 76, 60, 0.3);
+    color: white;
+}
+
+.btn-login:active {
+    transform: translateY(0);
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .cadastro-container {
+        padding: 40px 15px;
+    }
+    
+    .cadastro-card {
+        padding: 30px 25px;
+        margin: 0 10px;
+    }
+    
+    .cadastro-title {
+        font-size: 24px;
+        margin-bottom: 25px;
+    }
+}
+
+@media (max-width: 576px) {
+    .col-md-6.col-lg-4 {
+        max-width: 100%;
+    }
+    
+    .cadastro-card {
+        padding: 25px 20px;
+    }
+    
+    .form-control {
+        font-size: 16px; /* Evita zoom no iOS */
+    }
+}
+
+/* Animações sutis */
+.form-control, .radio-group {
+    animation: fadeInUp 0.6s ease-out;
+}
+
+.cadastro-card {
+    animation: fadeInScale 0.8s ease-out;
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeInScale {
+    from {
+        opacity: 0;
+        transform: scale(0.95) translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1) translateY(0);
+    }
+}
+
+/* Estados de hover para melhor UX */
+.form-control:hover:not(:focus) {
+    border-color: #dee2e6;
+    background-color: white;
+}
+
+.radio-group:hover {
+    border-color: #dee2e6;
+}
