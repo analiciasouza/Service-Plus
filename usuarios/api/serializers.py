@@ -1,11 +1,11 @@
 from django.contrib.auth import get_user_model
 from rest_framework import serializers
-from models import User
+from usuarios.models import User
 
 class UserSerializer(serializers.HyperlinkedModelSerializer):
      class Meta:
           model = User
-          fields = ['name' , 'email' , 'password' ,'day_of_birth' , 'is_activate'
+          fields = [ 'id', 'name' , 'email' , 'password' ,'day_of_birth' , 'is_activate' , 'type_user' ,  
                     'create_at', 'is_staff' , 'is_superuser'] 
 
           extra_kwargs = {

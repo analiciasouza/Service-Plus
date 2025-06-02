@@ -4,5 +4,5 @@ from home.models.categorias import Categoria
 class CategoriaSerializer(serializers.HyperlinkedModelSerializer):
      class Meta:
           model = Categoria
-          fields = ['nome' , 'imagem']
+          fields = [ 'id','name' , 'image']
     

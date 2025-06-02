@@ -13,6 +13,7 @@ urlpatterns = [
     path('servicos/', include('servicos.urls', namespace='servicos')),
 
     # API URLS
-    path('api/v1/home/', include('home.api.urls'))
+    path('api/v1/home/', include('home.api.urls')),
+    path('api/v1/usuarios/', include('usuarios.api.urls'))
 ] 
 urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

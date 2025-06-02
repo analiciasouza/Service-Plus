@@ -1,0 +1,282 @@
+{
+	"info": {
+		"_postman_id": "a72ba188-fe0d-460e-b7ba-b2f6a9c9f575",
+		"name": "Service +",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "43830001",
+		"_collection_link": "https://anabispo-9532485.postman.co/workspace/Ana-Bispo's-Workspace~6b7bd31b-da20-4dea-82ab-5d2682825327/collection/43830001-a72ba188-fe0d-460e-b7ba-b2f6a9c9f575?action=share&source=collection_link&creator=43830001"
+	},
+	"item": [
+		{
+			"name": "Home",
+			"item": [
+				{
+					"name": "Listar Profissional",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/api/v1/home/profissionais",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"home",
+								"profissionais"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Criar Profissional",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"nome_completo\" : \"Ana Bispo\",\n    \"profissao\" : \"Desenvolvedora\",\n    \"data_de_nascimento\" : \"2002-08-11\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}api/v1/home/profissionais",
+							"host": [
+								"{{url}}api"
+							],
+							"path": [
+								"v1",
+								"home",
+								"profissionais"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Atualizar Profissional",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"nome_completo\" : \"Ana Souza\",\n    \"profissao\" : \"Desenvolvedora\",\n    \"data_de_nascimento\" : \"2002-08-11\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}api/v1/home/profissional/{{id}}",
+							"host": [
+								"{{url}}api"
+							],
+							"path": [
+								"v1",
+								"home",
+								"profissional",
+								"{{id}}"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Deletar Profissional",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"nome_completo\" : \"Ana Souza\",\n    \"profissao\" : \"Desenvolvedora\",\n    \"data_de_nascimento\" : \"2002-08-11\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}api/v1/home/profissional/{{id}}",
+							"host": [
+								"{{url}}api"
+							],
+							"path": [
+								"v1",
+								"home",
+								"profissional",
+								"{{id}}"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Listar Categorias",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url}}api/v1/home/categorias",
+							"host": [
+								"{{url}}api"
+							],
+							"path": [
+								"v1",
+								"home",
+								"categorias"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Criar Categoria",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"name\" : \"Teste\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}api/v1/home/categoria/",
+							"host": [
+								"{{url}}api"
+							],
+							"path": [
+								"v1",
+								"home",
+								"categoria",
+								""
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Usuários",
+			"item": [
+				{
+					"name": "Listar Usuários",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/api/v1/usuarios/",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"usuarios",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Criar Usuários",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": " {\n        \"name\": \"Ana teste\",\n        \"email\": \"analiciasouza08@gmail.com\",\n        \"day_of_birth\": \"2002-08-11\",\n        \"type_user\" : \"cliente\",\n        \"password\" : 12345\n    }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/api/v1/usuarios/",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"usuarios",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Atualizar Usuário",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": " {\n        \"name\": \"Ana teste\",\n        \"email\": \"analiciasouza08@gmail.com\",\n        \"day_of_birth\": \"2000-11-11\",\n        \"type_user\" : \"cliente\",\n        \"password\" : 12345\n    }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/api/v1/usuarios/{{id}}",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"usuarios",
+								"{{id}}"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Atualizar Usuário Copy",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/api/v1/usuarios/{{id}}",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"usuarios",
+								"{{id}}"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
