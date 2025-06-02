@@ -27,7 +27,7 @@ SECRET_KEY = config('SECRET_KEY')
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['localhost', '127.0.0.1', '0.0.0.0']
 AUTH_USER_MODEL = 'usuarios.User'
 
 # Application definition
@@ -42,7 +42,8 @@ INSTALLED_APPS = [
     'rest_framework',
     'home', 
     'servicos',
-    'usuarios' 
+    'usuarios',
+    'rest_framework_simplejwt' 
 ]
 
 MIDDLEWARE = [
@@ -88,7 +89,7 @@ DATABASES = {
         'USER': config('DB_USER'),
         'PASSWORD':config('DB_PASSWORD'),
         'HOST': 'localhost',
-        'PORT' : 5432
+        'PORT' : config('DB_PORT', default='5432')
     }
 }
 
@@ -122,6 +123,12 @@ TIME_ZONE = 'UTC'
 USE_I18N = True
 
 USE_TZ = True
+
+REST_FRAMEWORK = {
+    'DEFAULT_AUTHENTICATION_CLASSES': (
+        'rest_framework_simplejwt.authentication.JWTAuthentication',
+    ),
+}
 
 
 # Static files (CSS, JavaScript, Images)
