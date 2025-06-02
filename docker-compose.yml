@@ -1,0 +1,39 @@
+version: '3.8'
+
+services:
+  db:
+    image: postgres:16-alpine # Versão do PostgreSQL. Alpine é mais leve.
+    volumes:
+      - postgres_data:/var/lib/postgresql/data/
+    environment:
+      POSTGRES_DB: serviceplus # Substitua pelo nome do seu DB
+      POSTGRES_USER: userpostgres # Substitua pelo seu usuário
+      POSTGRES_PASSWORD: postgres # Substitua pela sua senha
+    ports:
+      - "5432:5432" # Mapeia a porta do host para a porta do contêiner (opcional, para acessar o DB diretamente)
+
+  web:
+    build: . # Constrói a imagem a partir do Dockerfile no diretório atual
+    command: sh -c "python manage.py makemigrations &&
+                    python manage.py migrate &&
+                    python manage.py runserver 0.0.0.0:8000" # Roda migrações e inicia o servidor
+    volumes:
+      - .:/app # Mapeia o diretório do projeto para /app no contêiner
+    ports:
+      - "8000:8000" # Mapeia a porta do host para a porta do contêiner
+    depends_on:
+      - db # Garante que o DB seja iniciado antes do serviço web
+    env_file: # <<< Isso carrega o .env para o contêiner 'web'
+      - .env
+    environment:
+      # Variáveis de ambiente para o Django se conectar ao PostgreSQL
+      DB_HOST: db
+      DB_PORT: 5432 
+      
+      # Outras variáveis de ambiente que seu Django possa precisar
+      DJANGO_SETTINGS_MODULE: core.settings # Substitua pelo caminho correto do seu settings
+      DEBUG: "True" # Ou "False" para produção
+      SECRET_KEY: django-insecure-44m&cxgbn@xva_k#e-kx)q8tn5bzk+ca_8ig#f1m^8hzp(3*#v # MUDE ISSO EM PRODUÇÃO! Use variáveis de ambiente
+
+volumes:
+  postgres_data: # Volume para persistir os dados do PostgreSQL

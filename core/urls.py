@@ -3,6 +3,11 @@ from django.urls import path, include
 from django.conf import settings
 from django.conf.urls.static import static
 
+from rest_framework_simplejwt.views import (
+    TokenObtainPairView,
+    TokenRefreshView,
+)
+
 
 
 urlpatterns = [
@@ -14,6 +19,10 @@ urlpatterns = [
 
     # API URLS
     path('api/v1/home/', include('home.api.urls')),
-    path('api/v1/usuarios/', include('usuarios.api.urls'))
+    path('api/v1/usuarios/', include('usuarios.api.urls')),
+    
+    # Token JWT
+    path('api/token/', TokenObtainPairView.as_view(), name='token_obtain_pair'),
+    path('api/token/refresh/', TokenRefreshView.as_view(), name='token_refresh')
 ] 
 urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
